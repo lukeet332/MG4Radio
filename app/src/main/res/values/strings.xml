@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MG4 Radio</string>
+    <string name="favourites">Favourites</string>
+    <string name="dab_stations">DAB stations</string>
+    <string name="fm_stations">FM stations</string>
+    <string name="not_connected">Connect your phone to the MG4 hotspot (wireless Android Auto) to use the car radio</string>
+    <string name="vpn_blocks">Your VPN is blocking the car. Exclude MG4 Radio in Tailscale → Split tunneling.</string>
+</resources>

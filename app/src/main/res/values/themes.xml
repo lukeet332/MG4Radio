@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Android Auto tints the media player with these; gold to match the car's radio icon. -->
+    <style name="RadioTheme" parent="android:Theme.Material.NoActionBar">
+        <item name="android:colorPrimary">#D9A441</item>
+        <item name="android:colorPrimaryDark">#8A6420</item>
+        <item name="android:colorAccent">#E8B95A</item>
+    </style>
+</resources>
