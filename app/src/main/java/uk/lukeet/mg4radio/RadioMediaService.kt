@@ -41,6 +41,7 @@ class RadioMediaService : MediaBrowserServiceCompat() {
     private var shownHasLogo = false
     private var logoAttempts = 0
     private var reachable = true
+    private val reachability = Reachability()
 
     override fun onCreate() {
         super.onCreate()
@@ -137,11 +138,13 @@ class RadioMediaService : MediaBrowserServiceCompat() {
     private fun refresh() {
         val station = client.state()
         if (station == null) {
+            if (!reachability.onPoll(ok = false)) return
             reachable = false
             shownPlaying = null
             publishState(PlaybackStateCompat.STATE_ERROR)
             return
         }
+        reachability.onPoll(ok = true)
         reachable = true
         val stationChanged = station.key != shownKey
         if (stationChanged) {

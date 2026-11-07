@@ -10,8 +10,8 @@ android {
         applicationId = "uk.lukeet.mg4radio"
         minSdk = 26
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "1.1"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         // Test-only: -PradioHost=<ip> points the app at a fake bridge instead of the car hotspot.
         buildConfigField("String", "RADIO_HOST", "\"${project.findProperty("radioHost") ?: ""}\"")
@@ -28,6 +28,7 @@ dependencies {
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.media:media:1.7.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test:runner:1.5.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
 }
